@@ -42,7 +42,18 @@
 				document.getElementById('target').innerHTML = "Time was " + elapsed + " milliseconds.";
 			}
 		}, 8000);
+        // add event listener to the game button
+document.querySelector('#game-button').addEventListener('click', resetGame);
+const container = document.querySelector('#my-container');
+
+function promoteElement() {
+  const elements = container.children;
+  const randomIndex = Math.floor(Math.random() * elements.length); // generate random index
+  const randomElement = elements[randomIndex];
+  container.removeChild(randomElement); // remove element from current position
+  container.insertBefore(randomElement, container.firstChild); // insert element at the front
 	}
+}
 </script>
 </body>
 </html>

@@ -133,6 +133,14 @@ if (Math.abs(mouseRow - lastRow) <= 1 && Math.abs(mouseCol - lastCol) <= 1) {
 return "sorry, no help available";
 const helpButton = document.getElementById("help-button");
 helpButton.onclick = help;
+let mouseLocation = Math.floor(Math.random() * 24); // generates random value from 0 to 23
+let catLocation = Math.floor(Math.random() * 24); // generates random value from 0 to 23
+function resetGame() {
+  mouseLocation = Math.floor(Math.random() * 24); // generate new random value for mouse location
+  catLocation = Math.floor(Math.random() * 24); // generate new random value for cat location
+  bushes = 0; // reset number of bushes to zero
+  penalty = 0; // reset penalty to zero
+}
 }
 </script>
 </body>
